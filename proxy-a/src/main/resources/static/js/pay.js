@@ -12,8 +12,8 @@ $(function() {
 	var payId = 1111; // 支付人的唯一标识
 	var param = ""; // 自定义一些参数 支付后返回
 
-	var notify_url = "http://你的域名/codepay.jsp";// 通知地址
-	var return_url = "";// 支付后同步跳转地址
+	var notify_url = "http://3col.cn/pay/notice";// 通知地址
+	var return_url = "http://3col.cn/pay/notice";// 支付后同步跳转地址
 
 	if (price == null) {
 		price = "1";

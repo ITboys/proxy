@@ -12,6 +12,8 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,6 +23,8 @@ import com.proxy.proxya.domain.Pay;
 @Controller
 @RequestMapping("/pay")
 public class PayController {
+	
+	protected static Logger logger=LoggerFactory.getLogger(PayController.class); 
 
 	@RequestMapping("/buy")
 	public String buy() {
@@ -35,6 +39,7 @@ public class PayController {
 
 	@RequestMapping("/notice")
 	public String notice(HttpServletRequest request, ModelMap map) throws NoSuchAlgorithmException {
+		logger.info("=======================pay callbach start======================");
 		/**
 		 * 验证通知 处理自己的业务
 		 */
@@ -80,17 +85,19 @@ public class PayController {
 			String pay_id = request.getParameter("pay_id"); // 用户唯一标识
 			String money = request.getParameter("money"); // 付款金额
 			String price = request.getParameter("price"); // 提交的金额
-			System.out.println(
+			logger.info(
 					"========pay success:" + pay_no + ",pay_id=" + pay_id + ",money=" + money + ",price=" + price);
 			// out.print("ok");
 			map.put("payResult", "success：支付成功！");
 		} else {
 			// 参数不合法
 			// out.print("fail");
-			System.out.println("==============pay fail==============");
+			logger.warn("==============pay fail==============");
 			map.put("payResult", "fail：支付失败！");
 		}
+		logger.info("=======================pay callbach end======================");
 		return "notice";
+		
 	}
 
 }
