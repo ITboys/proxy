@@ -5,13 +5,15 @@ import java.util.Date;
 import lombok.Data;
 
 @Data
-public class User {
+public class Register {
 	
 	private Long id;
 	
 	private String name;
 	
-	private String password;
+	private Integer msgCode;
+	
+	private Integer msgCount;
 	
 	private Long phone;
 	
@@ -19,7 +21,6 @@ public class User {
 	
 	private Date createTime;
 	
-	private Date updateTime;
-	
+	private Date updateTime;	
 
 }

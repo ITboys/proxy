@@ -12,4 +12,5 @@ public interface UserMapper {
 	@Insert("INSERT INTO `user`(`name`,`password`,`phone`) VALUES(#{user.name}, #{user.password}, #{user.phone})")
 	void insert(@Param("user") User user);
 
+	User findUserByPhone(Long phone);
 }
