@@ -1,7 +1,10 @@
 package com.proxy.proxya.domain;
 
+import lombok.Data;
+
 import java.math.BigDecimal;
 
+@Data
 public class Pay {
 	
 	private BigDecimal price;
