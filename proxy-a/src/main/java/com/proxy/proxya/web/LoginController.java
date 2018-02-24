@@ -24,7 +24,7 @@ public class LoginController {
 
     @RequestMapping("/")
     @ResponseBody
-    public void LoginResponse( LoginRequest request) {
+    public void LoginResponse(@Valid @RequestBody LoginRequest request) {
         log.info("{}", request);
     }
 

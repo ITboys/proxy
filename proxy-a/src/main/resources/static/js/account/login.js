@@ -17,8 +17,9 @@ $(function () {
         $.ajax({
             method: "POST",
             url: "http://" + host + "/login/",
-            data: loginRequest,
-            dataType: "json"
+            data: JSON.stringify(loginRequest),
+            dataType: "json",
+            contentType:"application/json"
         }).success(function (result) {
 
         }).fail(function () {
