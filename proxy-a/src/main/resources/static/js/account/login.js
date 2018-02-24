@@ -12,11 +12,11 @@ $(function () {
         var username = $('#loginModal').find('input[name=username]').val();
         var password = $('#loginModal').find('input[name=password]').val();
         var loginRequest = {};
-        loginRequest.username = username;
+        loginRequest.userName = username;
         loginRequest.password = password;
         $.ajax({
-            type: "POST",
-            url: "http://" + host + "/login",
+            method: "POST",
+            url: "http://" + host + "/login/",
             data: loginRequest,
             dataType: "json"
         }).success(function (result) {

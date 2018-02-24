@@ -18,13 +18,13 @@ import javax.validation.Valid;
  * @date 2018/2/8 8:48
  */
 @Controller
-@RequestMapping("login")
+@RequestMapping("/login")
 @Slf4j
 public class LoginController {
 
-    @PostMapping
+    @RequestMapping("/")
     @ResponseBody
-    public void LoginResponse(@Valid @RequestBody LoginRequest request) {
+    public void LoginResponse( LoginRequest request) {
         log.info("{}", request);
     }
 
