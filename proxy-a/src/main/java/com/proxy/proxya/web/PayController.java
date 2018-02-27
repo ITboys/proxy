@@ -76,8 +76,9 @@ public class PayController {
 		MessageDigest md = MessageDigest.getInstance("MD5");
 		md.update((prestr + key).getBytes());
 		String mySign = new BigInteger(1, md.digest()).toString(16).toLowerCase();
-		if (mySign.length() != 32)
-			mySign = "0" + mySign;
+//		if (mySign.length() != 32) {
+//			mySign = "0" + mySign;
+//		}
 		if (mySign.equals(sign)) {
 			// 编码要匹配 编码不一致中文会导致加密结果不一致
 			// 参数合法处理业务
