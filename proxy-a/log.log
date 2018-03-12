@@ -10987,3 +10987,331 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 2018-01-28 16:16:45.131  INFO 20436 --- [main] com.proxy.proxya.account.UserTest        : Started UserTest in 5.775 seconds (JVM running for 6.466)
 2018-01-28 16:16:49.260  INFO 20436 --- [Thread-5] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@6ea1bcdc: startup date [Sun Jan 28 16:16:41 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@7db12bb6
 >>>>>>> b2bfa202bca37b79ae4262166bddd6e71f99631f
+2018-02-27 09:23:56.641  INFO 14664 --- [main] com.proxy.proxya.ProxyAApplication       : No active profile set, falling back to default profiles: default
+2018-02-27 09:23:56.672  INFO 14664 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@392a04e7: startup date [Tue Feb 27 09:23:56 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@3f91b517
+2018-02-27 09:23:58.224  INFO 14664 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f72817dc-f7bf-33e9-ab12-4119928a5bfd
+2018-02-27 09:23:58.240  INFO 14664 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-02-27 09:23:58.376  INFO 14664 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2c6f84c8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-02-27 09:23:58.412  INFO 14664 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$488987c5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-02-27 09:23:59.082  INFO 14664 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 80 (http)
+2018-02-27 09:23:59.155  INFO 14664 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-02-27 09:23:59.156  INFO 14664 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-02-27 09:23:59.354  INFO 14664 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-02-27 09:23:59.355  INFO 14664 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2683 ms
+2018-02-27 09:23:59.540  INFO 14664 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-02-27 09:23:59.548  INFO 14664 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-02-27 09:23:59.548  INFO 14664 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-02-27 09:23:59.549  INFO 14664 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-02-27 09:23:59.549  INFO 14664 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-02-27 09:24:00.980  INFO 14664 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2018-02-27 09:24:01.476  INFO 14664 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@392a04e7: startup date [Tue Feb 27 09:23:56 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@3f91b517
+2018-02-27 09:24:01.578  INFO 14664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/add]}" onto public java.lang.Integer com.proxy.proxya.web.ComputeService.compute(java.lang.Integer,java.lang.Integer)
+2018-02-27 09:24:01.581  INFO 14664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/register],methods=[POST]}" onto public com.proxy.proxya.domain.BizResult com.proxy.proxya.web.controller.RegisterController.register(com.proxy.proxya.domain.account.Register)
+2018-02-27 09:24:01.582  INFO 14664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.proxy.proxya.web.IndexController.index(org.springframework.ui.ModelMap)
+2018-02-27 09:24:01.582  INFO 14664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/]}" onto public void com.proxy.proxya.web.LoginController.LoginResponse(com.proxy.proxya.domain.request.LoginRequest)
+2018-02-27 09:24:01.583  INFO 14664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/pay/buy]}" onto public java.lang.String com.proxy.proxya.web.PayController.buy()
+2018-02-27 09:24:01.584  INFO 14664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/pay/notice]}" onto public java.lang.String com.proxy.proxya.web.PayController.notice(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap) throws java.security.NoSuchAlgorithmException
+2018-02-27 09:24:01.584  INFO 14664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/pay/pay]}" onto public java.lang.String com.proxy.proxya.web.PayController.pay(com.proxy.proxya.domain.Pay)
+2018-02-27 09:24:01.586  INFO 14664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-02-27 09:24:01.587  INFO 14664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-02-27 09:24:01.644  INFO 14664 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-27 09:24:01.645  INFO 14664 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-27 09:24:01.731  INFO 14664 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-27 09:24:03.577  WARN 14664 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2018-02-27 09:24:03.577  INFO 14664 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-02-27 09:24:03.640  WARN 14664 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2018-02-27 09:24:03.641  INFO 14664 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-02-27 09:24:03.825  INFO 14664 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-02-27 09:24:03.834  INFO 14664 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'refreshScope' has been autodetected for JMX exposure
+2018-02-27 09:24:03.835  INFO 14664 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'environmentManager' has been autodetected for JMX exposure
+2018-02-27 09:24:03.837  INFO 14664 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+2018-02-27 09:24:03.840  INFO 14664 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+2018-02-27 09:24:03.855  INFO 14664 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+2018-02-27 09:24:03.877  INFO 14664 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=392a04e7,type=ConfigurationPropertiesRebinder]
+2018-02-27 09:24:04.160  INFO 14664 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 80 (http)
+2018-02-27 09:24:04.166  INFO 14664 --- [main] com.proxy.proxya.ProxyAApplication       : Started ProxyAApplication in 13.627 seconds (JVM running for 16.205)
+2018-03-12 09:41:12.474  INFO 18880 --- [main] com.proxy.proxya.ProxyAApplication       : No active profile set, falling back to default profiles: default
+2018-03-12 09:41:12.506  INFO 18880 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@460b6d54: startup date [Mon Mar 12 09:41:12 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@9ebe38b
+2018-03-12 09:41:13.707  INFO 18880 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-03-12 09:41:14.046  INFO 18880 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=db99d1d8-7bbe-3c60-b1be-20a1a1a94790
+2018-03-12 09:41:14.073  INFO 18880 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-03-12 09:41:14.230  INFO 18880 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8e68cc8d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-03-12 09:41:14.276  INFO 18880 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$aa82cf8a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-03-12 09:41:14.841  INFO 18880 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 80 (http)
+2018-03-12 09:41:14.857  INFO 18880 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-03-12 09:41:14.858  INFO 18880 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-03-12 09:41:15.005  INFO 18880 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-03-12 09:41:15.006  INFO 18880 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2500 ms
+2018-03-12 09:41:15.202  INFO 18880 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-03-12 09:41:15.207  INFO 18880 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-03-12 09:41:15.208  INFO 18880 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-03-12 09:41:15.208  INFO 18880 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-03-12 09:41:15.208  INFO 18880 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-03-12 09:41:16.602  INFO 18880 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2018-03-12 09:41:17.148  INFO 18880 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@460b6d54: startup date [Mon Mar 12 09:41:12 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@9ebe38b
+2018-03-12 09:41:17.248  INFO 18880 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/add]}" onto public java.lang.Integer com.proxy.proxya.web.ComputeService.compute(java.lang.Integer,java.lang.Integer)
+2018-03-12 09:41:17.250  INFO 18880 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/register],methods=[POST]}" onto public com.proxy.proxya.domain.BizResult com.proxy.proxya.web.controller.RegisterController.register(com.proxy.proxya.domain.account.Register)
+2018-03-12 09:41:17.251  INFO 18880 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.proxy.proxya.web.IndexController.index(org.springframework.ui.ModelMap)
+2018-03-12 09:41:17.251  INFO 18880 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/]}" onto public void com.proxy.proxya.web.LoginController.LoginResponse(com.proxy.proxya.domain.request.LoginRequest)
+2018-03-12 09:41:17.252  INFO 18880 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/pay/buy]}" onto public java.lang.String com.proxy.proxya.web.PayController.buy()
+2018-03-12 09:41:17.253  INFO 18880 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/pay/pay]}" onto public java.lang.String com.proxy.proxya.web.PayController.pay(com.proxy.proxya.domain.Pay)
+2018-03-12 09:41:17.253  INFO 18880 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/pay/notice]}" onto public java.lang.String com.proxy.proxya.web.PayController.notice(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap) throws java.security.NoSuchAlgorithmException
+2018-03-12 09:41:17.255  INFO 18880 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-03-12 09:41:17.256  INFO 18880 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-03-12 09:41:17.298  INFO 18880 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-12 09:41:17.298  INFO 18880 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-12 09:41:17.348  INFO 18880 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-12 09:41:19.239  WARN 18880 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2018-03-12 09:41:19.239  INFO 18880 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-03-12 09:41:19.268  WARN 18880 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2018-03-12 09:41:19.268  INFO 18880 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-03-12 09:41:19.443  INFO 18880 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-03-12 09:41:19.452  INFO 18880 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'refreshScope' has been autodetected for JMX exposure
+2018-03-12 09:41:19.453  INFO 18880 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'environmentManager' has been autodetected for JMX exposure
+2018-03-12 09:41:19.454  INFO 18880 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+2018-03-12 09:41:19.456  INFO 18880 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+2018-03-12 09:41:19.473  INFO 18880 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+2018-03-12 09:41:19.485  INFO 18880 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=460b6d54,type=ConfigurationPropertiesRebinder]
+2018-03-12 09:41:19.720  INFO 18880 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 80 (http)
+2018-03-12 09:41:19.724  INFO 18880 --- [main] com.proxy.proxya.ProxyAApplication       : Started ProxyAApplication in 12.946 seconds (JVM running for 14.675)
+2018-03-12 09:41:36.702  INFO 18880 --- [http-nio-80-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-03-12 09:41:36.702  INFO 18880 --- [http-nio-80-exec-3] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-03-12 09:41:36.725  INFO 18880 --- [http-nio-80-exec-3] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms
+2018-03-12 09:41:36.776  INFO 18880 --- [http-nio-80-exec-3] com.proxy.proxya.web.IndexController     : =======================start==========
+2018-03-12 09:42:37.485  INFO 1552 --- [main] com.proxy.proxya.ProxyAApplication       : No active profile set, falling back to default profiles: default
+2018-03-12 09:42:37.495  INFO 1552 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4c03a37: startup date [Mon Mar 12 09:42:37 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@3fed2870
+2018-03-12 09:42:38.125  INFO 1552 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-03-12 09:42:38.322  INFO 1552 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=db99d1d8-7bbe-3c60-b1be-20a1a1a94790
+2018-03-12 09:42:38.343  INFO 1552 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-03-12 09:42:38.459  INFO 1552 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$dea0d1dd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-03-12 09:42:38.490  INFO 1552 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$fabad4da] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-03-12 09:42:38.791  INFO 1552 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 80 (http)
+2018-03-12 09:42:38.801  INFO 1552 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-03-12 09:42:38.802  INFO 1552 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-03-12 09:42:38.933  INFO 1552 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-03-12 09:42:38.934  INFO 1552 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1439 ms
+2018-03-12 09:42:39.087  INFO 1552 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-03-12 09:42:39.094  INFO 1552 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-03-12 09:42:39.095  INFO 1552 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-03-12 09:42:39.095  INFO 1552 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-03-12 09:42:39.095  INFO 1552 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-03-12 09:42:40.477  INFO 1552 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2018-03-12 09:42:40.921  INFO 1552 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4c03a37: startup date [Mon Mar 12 09:42:37 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@3fed2870
+2018-03-12 09:42:40.984  INFO 1552 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/add]}" onto public java.lang.Integer com.proxy.proxya.web.ComputeService.compute(java.lang.Integer,java.lang.Integer)
+2018-03-12 09:42:40.986  INFO 1552 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/register],methods=[POST]}" onto public com.proxy.proxya.domain.BizResult com.proxy.proxya.web.controller.RegisterController.register(com.proxy.proxya.domain.account.Register)
+2018-03-12 09:42:40.987  INFO 1552 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.proxy.proxya.web.IndexController.index(org.springframework.ui.ModelMap)
+2018-03-12 09:42:40.988  INFO 1552 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/]}" onto public void com.proxy.proxya.web.LoginController.LoginResponse(com.proxy.proxya.domain.request.LoginRequest)
+2018-03-12 09:42:40.989  INFO 1552 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/pay/pay]}" onto public java.lang.String com.proxy.proxya.web.PayController.pay(com.proxy.proxya.domain.Pay)
+2018-03-12 09:42:40.990  INFO 1552 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/pay/notice]}" onto public java.lang.String com.proxy.proxya.web.PayController.notice(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap) throws java.security.NoSuchAlgorithmException
+2018-03-12 09:42:40.990  INFO 1552 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/pay/buy]}" onto public java.lang.String com.proxy.proxya.web.PayController.buy()
+2018-03-12 09:42:40.993  INFO 1552 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-03-12 09:42:40.993  INFO 1552 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-03-12 09:42:41.031  INFO 1552 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-12 09:42:41.031  INFO 1552 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-12 09:42:41.080  INFO 1552 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-12 09:42:42.277  WARN 1552 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2018-03-12 09:42:42.277  INFO 1552 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-03-12 09:42:42.281  WARN 1552 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2018-03-12 09:42:42.281  INFO 1552 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-03-12 09:42:42.447  INFO 1552 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-03-12 09:42:42.455  INFO 1552 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'refreshScope' has been autodetected for JMX exposure
+2018-03-12 09:42:42.456  INFO 1552 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'environmentManager' has been autodetected for JMX exposure
+2018-03-12 09:42:42.458  INFO 1552 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+2018-03-12 09:42:42.460  INFO 1552 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+2018-03-12 09:42:42.472  INFO 1552 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+2018-03-12 09:42:42.484  INFO 1552 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=4c03a37,type=ConfigurationPropertiesRebinder]
+2018-03-12 09:42:42.727  INFO 1552 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 80 (http)
+2018-03-12 09:42:42.731  INFO 1552 --- [main] com.proxy.proxya.ProxyAApplication       : Started ProxyAApplication in 9.186 seconds (JVM running for 10.289)
+2018-03-12 09:42:49.845  INFO 1552 --- [http-nio-80-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-03-12 09:42:49.845  INFO 1552 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-03-12 09:42:49.869  INFO 1552 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 24 ms
+2018-03-12 09:42:49.909  INFO 1552 --- [http-nio-80-exec-2] com.proxy.proxya.web.IndexController     : =======================start==========
+2018-03-12 09:43:11.779  INFO 1552 --- [http-nio-80-exec-3] com.proxy.proxya.web.LoginController     : LoginRequest(userName=11, password=11, phone=null)
+2018-03-12 09:43:19.946 ERROR 1552 --- [http-nio-80-exec-3] com.proxy.proxya.util.JedisUtil          : set the key tw to redis failed, the value is tw
+2018-03-12 09:43:48.565  INFO 1552 --- [http-nio-80-exec-4] com.proxy.proxya.web.LoginController     : LoginRequest(userName=11, password=11, phone=null)
+2018-03-12 09:43:58.481 ERROR 1552 --- [http-nio-80-exec-4] com.proxy.proxya.util.JedisUtil          : set the key tw to redis failed, the value is tw
+2018-03-12 09:45:06.769  INFO 19656 --- [main] com.proxy.proxya.ProxyAApplication       : No active profile set, falling back to default profiles: default
+2018-03-12 09:45:06.789  INFO 19656 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@748fe51d: startup date [Mon Mar 12 09:45:06 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@3fed2870
+2018-03-12 09:45:07.470  INFO 19656 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-03-12 09:45:07.697  INFO 19656 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8274d16f-62dc-302b-8567-76c7f125f445
+2018-03-12 09:45:07.713  INFO 19656 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-03-12 09:45:07.823  INFO 19656 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ba74a680] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-03-12 09:45:07.854  INFO 19656 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$d68ea97d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-03-12 09:45:08.178  INFO 19656 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 80 (http)
+2018-03-12 09:45:08.188  INFO 19656 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-03-12 09:45:08.189  INFO 19656 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-03-12 09:45:08.322  INFO 19656 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-03-12 09:45:08.323  INFO 19656 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1534 ms
+2018-03-12 09:45:08.480  INFO 19656 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-03-12 09:45:08.486  INFO 19656 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-03-12 09:45:08.487  INFO 19656 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-03-12 09:45:08.487  INFO 19656 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-03-12 09:45:08.487  INFO 19656 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-03-12 09:45:08.561  WARN 19656 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jedisUtil': Unsatisfied dependency expressed through method 'setJedisPool' parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'redis.clients.jedis.JedisPool' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2018-03-12 09:45:08.562  INFO 19656 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2018-03-12 09:45:08.665  INFO 19656 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-03-12 09:45:08.963 ERROR 19656 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method setJedisPool in com.proxy.proxya.util.JedisUtil required a bean of type 'redis.clients.jedis.JedisPool' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'redis.clients.jedis.JedisPool' in your configuration.
+
+2018-03-12 09:46:30.487  INFO 15516 --- [main] com.proxy.proxya.ProxyAApplication       : No active profile set, falling back to default profiles: default
+2018-03-12 09:46:30.498  INFO 15516 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6daf2337: startup date [Mon Mar 12 09:46:30 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@3fed2870
+2018-03-12 09:46:31.171  INFO 15516 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-03-12 09:46:31.387  INFO 15516 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8274d16f-62dc-302b-8567-76c7f125f445
+2018-03-12 09:46:31.405  INFO 15516 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-03-12 09:46:31.528  INFO 15516 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f5fdcdc6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-03-12 09:46:31.560  INFO 15516 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$1217d0c3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-03-12 09:46:31.869  INFO 15516 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 80 (http)
+2018-03-12 09:46:31.878  INFO 15516 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-03-12 09:46:31.879  INFO 15516 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-03-12 09:46:32.004  INFO 15516 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-03-12 09:46:32.004  INFO 15516 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1506 ms
+2018-03-12 09:46:32.164  INFO 15516 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-03-12 09:46:32.172  INFO 15516 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-03-12 09:46:32.173  INFO 15516 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-03-12 09:46:32.174  INFO 15516 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-03-12 09:46:32.174  INFO 15516 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-03-12 09:46:32.237  WARN 15516 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jedisUtil': Unsatisfied dependency expressed through method 'setJedisPool' parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'redis.clients.jedis.JedisPool' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2018-03-12 09:46:32.239  INFO 15516 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2018-03-12 09:46:32.258  INFO 15516 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-03-12 09:46:32.364 ERROR 15516 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method setJedisPool in com.proxy.proxya.util.JedisUtil required a bean of type 'redis.clients.jedis.JedisPool' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'redis.clients.jedis.JedisPool' in your configuration.
+
+2018-03-12 09:47:15.016  INFO 19396 --- [main] com.proxy.proxya.ProxyAApplication       : No active profile set, falling back to default profiles: default
+2018-03-12 09:47:15.027  INFO 19396 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@393881f0: startup date [Mon Mar 12 09:47:15 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@77128536
+2018-03-12 09:47:15.744  INFO 19396 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-03-12 09:47:15.963  INFO 19396 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8274d16f-62dc-302b-8567-76c7f125f445
+2018-03-12 09:47:15.980  INFO 19396 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-03-12 09:47:16.100  INFO 19396 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fa80b3a7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-03-12 09:47:16.135  INFO 19396 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$169ab6a4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-03-12 09:47:16.569  INFO 19396 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 80 (http)
+2018-03-12 09:47:16.579  INFO 19396 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-03-12 09:47:16.581  INFO 19396 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-03-12 09:47:16.714  INFO 19396 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-03-12 09:47:16.714  INFO 19396 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1687 ms
+2018-03-12 09:47:16.875  INFO 19396 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-03-12 09:47:16.880  INFO 19396 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-03-12 09:47:16.880  INFO 19396 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-03-12 09:47:16.880  INFO 19396 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-03-12 09:47:16.880  INFO 19396 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-03-12 09:47:16.942  WARN 19396 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jedisUtil': Unsatisfied dependency expressed through method 'setJedisPool' parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'redis.clients.jedis.JedisPool' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2018-03-12 09:47:16.943  INFO 19396 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2018-03-12 09:47:16.959  INFO 19396 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-03-12 09:47:17.069 ERROR 19396 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method setJedisPool in com.proxy.proxya.util.JedisUtil required a bean of type 'redis.clients.jedis.JedisPool' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'redis.clients.jedis.JedisPool' in your configuration.
+
+2018-03-12 09:49:49.473  INFO 19832 --- [main] com.proxy.proxya.ProxyAApplication       : No active profile set, falling back to default profiles: default
+2018-03-12 09:49:49.484  INFO 19832 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@78de58ea: startup date [Mon Mar 12 09:49:49 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@77128536
+2018-03-12 09:49:50.219  INFO 19832 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-03-12 09:49:50.452  INFO 19832 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8274d16f-62dc-302b-8567-76c7f125f445
+2018-03-12 09:49:50.470  INFO 19832 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-03-12 09:49:50.626  INFO 19832 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4edea684] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-03-12 09:49:50.660  INFO 19832 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$6af8a981] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-03-12 09:49:50.959  INFO 19832 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 80 (http)
+2018-03-12 09:49:50.969  INFO 19832 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-03-12 09:49:50.970  INFO 19832 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-03-12 09:49:51.153  INFO 19832 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-03-12 09:49:51.153  INFO 19832 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1669 ms
+2018-03-12 09:49:51.303  INFO 19832 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-03-12 09:49:51.309  INFO 19832 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-03-12 09:49:51.310  INFO 19832 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-03-12 09:49:51.310  INFO 19832 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-03-12 09:49:51.310  INFO 19832 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-03-12 09:49:51.371  WARN 19832 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jedisUtil': Unsatisfied dependency expressed through method 'setJedisPool' parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'redis.clients.jedis.JedisPool' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2018-03-12 09:49:51.372  INFO 19832 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2018-03-12 09:49:51.391  INFO 19832 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-03-12 09:49:51.496 ERROR 19832 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method setJedisPool in com.proxy.proxya.util.JedisUtil required a bean of type 'redis.clients.jedis.JedisPool' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'redis.clients.jedis.JedisPool' in your configuration.
+
+2018-03-12 09:52:51.454  INFO 20336 --- [main] com.proxy.proxya.ProxyAApplication       : No active profile set, falling back to default profiles: default
+2018-03-12 09:52:51.477  INFO 20336 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4cafa9aa: startup date [Mon Mar 12 09:52:51 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@3fed2870
+2018-03-12 09:52:52.175  INFO 20336 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-03-12 09:52:52.377  INFO 20336 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8274d16f-62dc-302b-8567-76c7f125f445
+2018-03-12 09:52:52.397  INFO 20336 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-03-12 09:52:52.527  INFO 20336 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fa56a535] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-03-12 09:52:52.574  INFO 20336 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$1670a832] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-03-12 09:52:52.905  INFO 20336 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 80 (http)
+2018-03-12 09:52:52.915  INFO 20336 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-03-12 09:52:52.917  INFO 20336 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-03-12 09:52:53.104  INFO 20336 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-03-12 09:52:53.104  INFO 20336 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1627 ms
+2018-03-12 09:52:53.266  INFO 20336 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-03-12 09:52:53.271  INFO 20336 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-03-12 09:52:53.272  INFO 20336 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-03-12 09:52:53.272  INFO 20336 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-03-12 09:52:53.272  INFO 20336 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-03-12 09:52:53.338  WARN 20336 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jedisUtil': Unsatisfied dependency expressed through field 'jedisPool'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'redis.clients.jedis.JedisPool' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2018-03-12 09:52:53.339  INFO 20336 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2018-03-12 09:52:53.357  INFO 20336 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-03-12 09:52:53.472 ERROR 20336 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field jedisPool in com.proxy.proxya.util.JedisUtil required a bean of type 'redis.clients.jedis.JedisPool' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'redis.clients.jedis.JedisPool' in your configuration.
+
