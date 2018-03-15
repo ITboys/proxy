@@ -5,7 +5,9 @@ package com.proxy.proxya.web;
 
 import com.proxy.proxya.domain.request.LoginRequest;
 import com.proxy.proxya.util.JedisUtil;
+import com.proxy.proxya.web.service.IRedisService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,12 +25,15 @@ import javax.validation.Valid;
 @Slf4j
 public class LoginController {
 
+    @Autowired
+    private IRedisService redisService;
+
     @RequestMapping("/")
     @ResponseBody
     public void LoginResponse(@Valid @RequestBody LoginRequest request) {
         log.info("{}", request);
         // test redis
-        new JedisUtil().set("tw", "tw");
+        redisService.set("name", "tw");
     }
 
 
