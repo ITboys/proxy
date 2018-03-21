@@ -1,31 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.proxy.proxya.web.mapper.UserMapper" >
-  <resultMap id="BaseResultMap" type="com.proxy.proxya.domain.account.User" >
-    <id column="id" property="id" jdbcType="BIGINT" />
-    <result column="user_name" property="userName" jdbcType="VARCHAR" />
-    <result column="password" property="password" jdbcType="VARCHAR" />
-    <result column="phone" property="phone" jdbcType="BIGINT" />
-    <result column="status" property="status" jdbcType="BIT" />
-    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
-    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
-  </resultMap>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+<mapper namespace="com.proxy.proxya.web.mapper.UserMapper">
+    <resultMap id="BaseResultMap" type="com.proxy.proxya.domain.account.User">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="user_name" property="userName" jdbcType="VARCHAR"/>
+        <result column="password" property="password" jdbcType="VARCHAR"/>
+        <result column="phone" property="phone" jdbcType="BIGINT"/>
+        <result column="status" property="status" jdbcType="BIT"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="baseColumn">
+        id, user_name, `password`, phone, `status`, create_time, update_time
+    </sql>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     delete from user
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.proxy.proxya.domain.User" >
-    <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
-      SELECT LAST_INSERT_ID()
-    </selectKey>
-    insert into user (user_name, `password`, phone, 
-      `status`, create_time, update_time
-      )
-    values (#{userName,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{phone,jdbcType=BIGINT}, 
-      #{status,jdbcType=BIT}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}
-      )
-  </insert>
-  <update id="updateByPrimaryKey" parameterType="com.proxy.proxya.domain.User" >
+    <insert id="insert" parameterType="com.proxy.proxya.domain.account.User">
+        <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into user (user_name, `password`, phone,
+        `status`, create_time, update_time
+        )
+        values (#{userName,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{phone,jdbcType=BIGINT},
+        #{status,jdbcType=BIT}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}
+        )
+    </insert>
+    <update id="updateByPrimaryKey" parameterType="com.proxy.proxya.domain.account.User">
     update user
     set user_name = #{userName,jdbcType=VARCHAR},
       `password` = #{password,jdbcType=VARCHAR},
@@ -35,13 +39,20 @@
       update_time = #{updateTime,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
     select id, user_name, `password`, phone, `status`, create_time, update_time
     from user
     where id = #{id,jdbcType=BIGINT}
   </select>
-  <select id="selectAll" resultMap="BaseResultMap" >
+    <select id="selectAll" resultMap="BaseResultMap">
     select id, user_name, `password`, phone, `status`, create_time, update_time
     from user
   </select>
+
+    <select id="findByNameAndPassword" resultMap="BaseResultMap">
+        SELECT
+        <include refid="baseColumn"/>
+        FROM `user`
+        WHERE `user_name` = #{userName} AND password = #{password}
+    </select>
 </mapper>

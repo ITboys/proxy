@@ -17,7 +17,7 @@ public class UserTest extends ProxyAApplicationTests {
 	@Test
 	public void test() {
 		User user = new User();
-		user.setName("testUser");
+		user.setUserName("testUser");
 		user.setPassword("xxx");
 		user.setPhone(13698418308L);
 		userMapper.insert(user);
@@ -27,8 +27,6 @@ public class UserTest extends ProxyAApplicationTests {
 	public void findUser() {
 		System.out.println("=======================start===================");
 		try{
-			User user = userMapper.findUserByPhone(13698418308L);
-			System.out.println("========================:" + user);
 		} catch(Exception e) {
 			e.printStackTrace();
 		}

@@ -23,5 +23,5 @@ public interface UserMapper {
      *
      * @return
      */
-    User findByNameAndPasswd(LoginRequest request);
+    User findByNameAndPassword(LoginRequest request);
 }

@@ -7,11 +7,13 @@ import com.proxy.proxya.domain.request.LoginRequest;
 import com.proxy.proxya.web.mapper.UserMapper;
 import com.proxy.proxya.web.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * @author kobe_t
  * @date 2018/3/20 9:13
  */
+@Service
 public class LoginServiceImpl implements LoginService {
 
     @Autowired
@@ -19,6 +21,6 @@ public class LoginServiceImpl implements LoginService {
 
     @Override
     public void login(LoginRequest request) {
-
+        userMapper.findByNameAndPassword(request);
     }
 }
