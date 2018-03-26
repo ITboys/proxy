@@ -12152,3 +12152,4 @@ Caused by: java.lang.ClassNotFoundException: Cannot find class: com.proxy.proxya
 2018-03-21 09:26:07.276 DEBUG 21308 --- [http-nio-80-exec-1] c.p.p.w.m.U.findByNameAndPassword        : ==>  Preparing: SELECT id, user_name, `password`, phone, `status`, create_time, update_time FROM `user` WHERE `user_name` = ? AND password = ? 
 2018-03-21 09:26:07.591 DEBUG 21308 --- [http-nio-80-exec-1] c.p.p.w.m.U.findByNameAndPassword        : ==> Parameters: 11(String), 11(String)
 2018-03-21 09:26:07.821 DEBUG 21308 --- [http-nio-80-exec-1] c.p.p.w.m.U.findByNameAndPassword        : <==      Total: 0
+2018-03-23 09:41:17.814  INFO 21308 --- [http-nio-80-exec-6] com.proxy.proxya.web.IndexController     : =======================start==========
