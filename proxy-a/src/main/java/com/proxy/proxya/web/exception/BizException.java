@@ -35,5 +35,9 @@ public class BizException extends RuntimeException {
         super(message);
         this.resultCode = resultCode;
     }
+
+    public ResultCodeEnum getResultCode() {
+        return resultCode;
+    }
 }
 

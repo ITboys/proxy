@@ -1,4 +1,4 @@
-package com.proxy.proxya.domain.template;
+package com.proxy.proxya.web.template;
 
 /**
  * 业务处理回调函数定义
