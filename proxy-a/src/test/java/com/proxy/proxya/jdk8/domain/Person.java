@@ -20,12 +20,12 @@ public class Person {
     /**
      * 年龄
      */
-    private Integer age;
+    private int age;
 
     /**
      * 性别
      */
-    private Integer sex;
+    private int sex;
 
     public Person(String name, Integer age, Integer sex) {
         this.name = name;
