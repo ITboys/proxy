@@ -3,10 +3,12 @@
  */
 package com.proxy.proxya.web.service.impl;
 
-import com.proxy.proxya.web.service.IRedisService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.proxy.proxya.web.service.IRedisService;
+
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 

@@ -1,34 +1,66 @@
-/**
- * @copyright remark holdings
- */
+
 package com.proxy.proxya.jdk8;
 
-import groovy.lang.ObjectRange;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.proxy.proxya.jdk8.domain.Person;
 
-/**
- * @author kobe_t
- * @date 2018/4/17 20:15
- */
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class Chapter3 {
 
-    @Test
-    public void test() {
-        Number number = new Integer(1);
-//        List<Number> list = new ArrayList<Integer>();
-        List<? extends Number> list = new ArrayList<Number>();
-//        list.add(new Integer(1));
-//        list.add(new Float(1.2));
-        // 协变
-        List<? extends Number> iList = new ArrayList<Integer>();
-//        iList.add(new Integer(1));
-//        iList.add(new Object());
-        // 逆变
-        List<? super Number> oList = new ArrayList<Object>();
-        oList.add(new Integer(1));
-        oList.add(new Float(1.12));
-    }
+	@Test
+	public void test() {
+
+		// 数据并行化处理
+		// 学生集合
+//		Person kobe = new Person("kobe", 40, 1);
+//		Person jordan = new Person("jordan", 50, 1);
+//		Person mess = new Person("mess", 20, 2);
+		List<Person> personList = new ArrayList<>(1000000);
+		for(int i=0,j=1000000;i<j;i++) {
+			int sex = i % 2;
+			Person p = new Person(String.valueOf(i), i, sex);
+			personList.add(p);
+		}
+		
+		long beginTime = System.currentTimeMillis();
+		
+		// 原来的方式
+        List<Person> oldBoys = new ArrayList<>(personList.size());
+        for (Person p : personList) {
+            // 性别男
+            if (p.getSex() == 1) {
+                oldBoys.add(p);
+            }
+        }
+        long endTime = System.currentTimeMillis();
+        log.info("原来的方式 take time:" + (endTime - beginTime));
+        
+//        beginTime = System.currentTimeMillis();
+//		// 流方式：找出所有男同学
+//		List<Person> newBoys = personList.stream()
+//				.filter(p -> 1 == p.getSex())
+//				.collect(Collectors.toList());
+//		
+//		endTime = System.currentTimeMillis();
+//		log.info("流方式 take time:" + (endTime - beginTime));
+		
+
+        beginTime = System.currentTimeMillis();
+		// 流方式：找出所有男同学
+		List<Person> parallelBoys = personList.parallelStream()
+				.filter(p -> 1 == p.getSex())
+				.collect(Collectors.toList());
+		
+		endTime = System.currentTimeMillis();
+		log.info("并行流方式 take time:" + (endTime - beginTime));
+	}
+
 }

@@ -2,14 +2,12 @@ package com.proxy.proxya.account;
 
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.transaction.annotation.Transactional;
 
-import com.proxy.proxya.ProxyAApplicationTests;
 import com.proxy.proxya.domain.account.User;
 import com.proxy.proxya.web.mapper.UserMapper;
 
 //@Transactional
-public class UserTest extends ProxyAApplicationTests {
+public class UserTest {
 
 	@Autowired
 	private UserMapper userMapper;
