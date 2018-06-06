@@ -100,6 +100,9 @@ public class Chapter2 {
         Map<String, Integer> dulipcateMap = personList.stream()
                 .collect(Collectors.toMap(Person::getName, Person::getAge, (o, n) -> n));
 
+        // 转换成set
+        Set<Person> set = personList.stream().collect(Collectors.toSet());
+
         // 将age>45的学生提拔成师父
         personList.stream().filter(p -> p.getAge()> 45).map(p -> {
             Teacher t = new Teacher();
